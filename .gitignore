@@ -150,7 +150,7 @@ Network Trash Folder
 Temporary Items
 .apdisk
 ### Laravel template
-vendor/
+!vendor/
 node_modules/
 npm-debug.log
 
