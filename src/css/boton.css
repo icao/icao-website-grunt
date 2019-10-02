@@ -1,0 +1,182 @@
+.btn_callToAction {
+    min-width: 150px;
+    max-width: 250px;
+    display: block;
+    /*margin: 1em;*/
+    /*padding: 1em 2em;*/
+    /*border: none;*/
+    background: none;
+    /*color: inherit;*/
+    /*vertical-align: middle;*/
+    position: relative;
+    z-index: 1;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 18px;
+    font-weight: 400;
+    text-transform: uppercase;
+    border: 1px solid #ffffff;
+    border-radius: 3px;
+}
+.btn_callToAction:focus {
+    outline: none;
+}
+
+.btn_callToAction> span {
+    vertical-align: middle;
+}
+
+
+/* Naira */
+
+.btn_affectSuit {
+    padding: 0;
+    overflow: hidden;
+    transition: background-color 0.3s;
+}
+
+.btn_affectSuit::before {
+    content: '';
+    position: absolute;
+    left: -10%;
+    width: 400%;
+    height: 200%;
+    background: #ffffff;
+    top: -20%;
+    z-index: -1;
+    transform: translate3d(0, -100%, 0) rotate3d(0, 0, 1, 10deg);
+}
+
+.btn_affectSuit> span {
+    display: block;
+}
+
+.btn_affectSuit .btn_icoSuit {
+    position: absolute;
+    /*top: -15;*/
+    width: 100%;
+    left: 0;
+    color: #212121;
+    font-size: 24px;
+    transform: translate3d(0, -100%, 0);
+}
+
+.btn_affectSuit> span,
+.btn_affectSuit .btn_icoSuit {
+    padding: 12px 38px;
+    transition: transform 0.5s;
+    transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+}
+
+.btn_affectSuit:hover::before,
+.btn_affectSuit:focus::before {
+    animation: anim-naira-1 0.3s forwards ease-in;
+}
+
+.btn_affectSuit:hover,
+.btn_affectSuit:focus {
+    background-color: #ffffff;
+    transition: background-color 0.1s;
+}
+
+.btn_affectSuit:hover .btn_icoSuit {
+    transform: translate3d(0, 0, 0);
+}
+
+.btn_affectSuit:hover> span {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+}
+
+
+/*Boton blue*/
+
+.btn_bluePrimary {
+    background-color: #0288d1;
+    border: 1px solid #0288d1;
+    border-radius: 4px;
+    /*padding: 5px 0*/
+    font-size: 18px;
+    font-weight: 300;
+    /*text-transform: uppercase;*/
+    color: #ffffff;
+    text-align: center;
+    display: block;
+    position: relative;
+    z-index: 1;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.btn_bluePrimary:focus {
+    outline: none;
+}
+
+.btn_bluePrimary> span {
+    vertical-align: middle;
+}
+
+
+/* Naira */
+
+.btn_affectSuitBlue {
+    padding: 0;
+    overflow: hidden;
+    transition: background-color 0.3s;
+}
+
+.btn_affectSuitBlue::before {
+    content: '';
+    position: absolute;
+    left: -10%;
+    width: 400%;
+    height: 200%;
+    background: #0288d1;
+    top: -20%;
+    z-index: -1;
+    transform: translate3d(0, -100%, 0) rotate3d(0, 0, 1, 10deg);
+}
+
+.btn_affectSuitBlue> span {
+    display: block;
+}
+
+.btn_affectSuitBlue .btn_icoSuitBlue {
+    position: absolute;
+    /*top: -15;*/
+    width: 100%;
+    left: 0;
+    color: #0288d1;
+    font-size: 24px;
+    transform: translate3d(0, -100%, 0);
+}
+
+.btn_affectSuitBlue> span,
+.btn_affectSuitBlue .btn_icoSuitBlue {
+    padding: 8px 44px;
+    transition: transform 0.5s;
+    transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+}
+
+.btn_affectSuitBlue:hover::before,
+.btn_affectSuitBlue:focus::before {
+    animation: anim-naira-1 0.3s forwards ease-in;
+}
+
+.btn_affectSuitBlue:hover,
+.btn_affectSuitBlue:focus {
+    background-color: #ffffff;
+    border: 1px solid #0288d1;
+    transition: background-color 0.1s;
+}
+
+.btn_affectSuitBlue:hover .btn_icoSuitBlue {
+    transform: translate3d(0, 0, 0);
+}
+
+.btn_affectSuitBlue:hover> span {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+}

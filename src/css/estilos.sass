@@ -1,0 +1,1182 @@
+//Fonts
+//400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900italic,900
+$fontRoboto : 'Roboto', sans-serif
+//100,300,400,700,900,100italic,300italic,400italic,700italic,900italic
+$fontLato: 'Lato', arial
+//Colors Pantone icaowebsite
+$fontColor: #212121
+$blueBase: #0288d1
+$blueLight: #03a9f4
+$blueThin: #26b4f4
+$grayDark: #17181c
+$grayMedium: #424242
+$grayRegular:#bdbdbd
+$grayLight: #f2f2f2
+$grayThin: #eff1f7
+$white: #ffffff
+$green: #1abc9c
+$orange: #fa4949
+$red: #f44336
+$redRegular: #d32f2f
+
+//break points MediaQuerys
+/* Extra small devices (phones, less than 768px) */
+$break-extraSmall: 768px
+/* Small devices (tablets, 768px and up) */
+$break-small: 768px
+/* Medium devices (desktops, 992px and up) */
+$break-medium: 992px
+/* Large devices (large desktops, 1200px and up) */
+$break-large:1200px
+
+
+body
+   font-family: $fontLato
+
+.viewport
+   height: 100vh
+   width: auto
+   //max-height: 100vh
+   /*min-width: 100vw;*/
+   /*margin: 0 auto;*/
+   /*overflow: hidden;*/
+
+.sectionTitle
+   font-size: 38px
+   font-weight: 700
+   // letter-spacing: 1px
+   // line-height: 36px
+   margin: 0 auto
+   max-width: 340px
+   // min-width: 250px
+   padding: 16px 20px
+   // position: relative
+   text-align: center
+   text-transform: uppercase
+   margin-bottom: 60px
+
+.blackMarginTitle
+   h1
+      color: $grayDark
+      border: 2px solid $grayDark
+
+.whiteMarginTitle
+   h1
+      color: $white
+      border: 2px solid $white
+
+.circleTitle
+   background-color: $blueBase
+   width: 18px
+   height: 18px
+   border-radius: 50%
+   position: relative
+   top: -5em
+   left: 49.1%
+
+.flexCenter_Y
+   width: auto
+   height: 100vh
+   display: flex
+   align-items: center
+   justify-content: center
+   flex-direction: column
+
+.centerX
+   display: flex
+   //alinear items al centro en X
+   justify-content: center
+   //acomodo de items en direccion horizontal
+   flex-direction: row
+
+.centerY
+   display: flex
+   //alinear items al centro en Y
+   align-items: center
+   // acomodo de items en direccion vertical
+   flex-direction: column
+
+.centerXY
+   display: flex
+   //alinear items al centro en X
+   justify-content: center
+   //alinear items al centro en Y
+   align-items: center
+
+/*ELEMENT FILTER OF PORTFOLIO*/
+.containerMixH .mix
+   display: none
+
+
+/*ELEMENTS BUTTONS*/
+.btn_basic
+   a
+      background-color: $blueBase
+      color: $white
+      text-align: center
+      text-transform: uppercase
+      font-size: 17px
+      font-weight: 400
+      border-radius: 3px
+      text-decoration: none
+      display: block
+      padding: 15px 15px
+      &:hover
+         background-color: $white
+         color: $blueThin
+         text-decoration: none
+      &:link
+         text-decoration: none
+      &:active
+         text-decoration: none
+      &:visited
+         text-decoration: none
+
+.btn_form
+   width: 60%
+   border-radius: 4px
+   background-color: $blueBase
+   color: $white 
+   font-size: 18px
+   font-family: $fontLato
+   font-weight: 300
+   padding: 10px 0
+   &:hover
+      background-color: $blueThin
+      color: $white
+   @media screen and (max-width: $break-small)
+      width: 100%
+
+#btn_scrollUp
+   position: fixed
+   background-color: $grayMedium
+   padding: 10px
+   border-radius: 3px
+   bottom: 20px
+   right: 20px
+   transition: all 0.3s ease-out 0s
+   z-index: 1000
+   span
+      color: $white 
+      font-size: 35px
+   &:hover
+      background-color: $blueBase   
+
+/*SECCTION NAVBAR*/
+#mainNav
+.navbar-custom
+   background-color: $grayDark
+   border-color: transparent
+   color: $white 
+   font-family: $fontLato
+   text-transform: uppercase
+   .navbar-brand
+      img
+         width: 130px
+         height: auto
+         margin-top: -0.58em
+         transition: width 0.4s ease-in
+         @media screen and (max-width: $break-small - 1px)
+            width: 100px
+            height: auto
+            margin-top: -0.2em
+            transition: width 0.4s ease-in
+   .navbar-collapse
+      border-color: $grayThin
+   .navbar-toggle
+      background-color: transparent
+      border-color: transparent
+      &:hover,
+      &:focus 
+         background-color: $grayMedium
+         transition: all 0.4s ease-out
+   i
+      font-size: 26px
+   .nav
+      li
+         a
+            font-weight: 500
+            letter-spacing: 1px
+            color: $white
+            &:hover,
+            &:focus 
+               color: $blueThin
+               outline: none
+   .navbar-nav > .active > a
+      border-radius: 0
+      color: $blueThin
+      border: 1px solid $white
+      background-color: transparent
+      transition: color 0.3s ease-in
+   
+   .navbar-nav>.active>a:hover,
+   .navbar-nav>.active>a:focus
+      color: $blueThin
+      border: 1px solid $white
+      background-color: transparent
+      
+@media screen and (min-width: $break-small)
+   .navbar-custom
+      background-color: transparent
+      padding: 25px 0
+      border: none
+      transition: padding 0.4s ease
+      .navbar-brand
+         font-size: 2em
+         transition: all 0.3s
+      .navbar-nav > .active > a
+         border-radius: 1px
+    
+//Navbar change on scroll
+@media screen and (min-width: $break-small) 
+   .navbar-custom.affix
+      background-color: $grayDark
+      padding: 10px 0
+      transition: padding 0.4s ease
+      a 
+         img
+            width: 120px
+            height: auto
+            transition: width 0.4s ease-in
+
+
+/*SECTION HOME*/
+#home
+   h2
+      font-size: 50px
+      margin-bottom: 1.6em
+      span
+         font-weight: 700
+         text-transform: uppercase
+      @media screen and (max-width: $break-small)
+         font-size: 46px
+         margin-bottom: 1em
+
+   p
+      font-weight: 400
+      font-size: 22px
+      margin-bottom: 1.5em
+      @media screen and (max-width: $break-small)
+         font-size: 20px
+         margin-bottom: 1.5em
+
+      span
+         font-weight: 700
+   a
+      color: $white
+      text-decoration: none 
+
+.home
+   background-image: url(../images/b_home.jpg)
+   background-size: cover
+   background-position: center
+   background-attachment: fixed
+   @extend .viewport
+   color: $white
+   text-align: center
+   overflow: hidden
+
+.b_filtroHome
+   background-color: rgba(23, 24, 28, 0.75)
+   width: 100%
+   height: 100%
+
+/*SECTION ABOUT US*/
+#acercaDeMi
+   @extend .blackMarginTitle
+.acercaDeMi
+   background-image: url(../images/b_acercaDe.jpg)
+   background-position: center
+   background-size: cover
+   background-attachment: fixed
+   width: 100%
+   height: 100%
+
+.b_filtroAcercaDeMi
+   background-color: rgba(240, 242, 247, 0.9)
+   padding: 60px 0 80px 0
+
+
+
+.fotoPerfil
+   padding: 0em
+
+.imgPerfil
+   // background-color: $grayDark
+   border-radius: 50%
+   width: 230px
+   height: 230px
+   display: table
+   margin: 0 auto
+   overflow: hidden
+   img
+      width: 100%
+      height: auto
+      //border-radius: 50%
+
+.nameProfile
+   text-align: center
+   padding-top: 1em
+   h2
+      font-weight: bold
+      font-size: 20px
+      // padding-top: 5px
+   h3
+      font-size: 20px
+      margin-top: -5px
+   hr
+      border-bottom: 1px solid $fontColor
+      width: 60%
+.dateProfile
+   font-size: 16px
+   text-align: center
+   margin-top: -8px
+   span
+      display: block
+   a
+      text-decoration: none
+      color: $grayDark
+   &:visited, &:active, &:link
+      text-decoration: none
+
+
+.infoPerfil
+   // padding-left: 30px
+   padding: 1em 0
+   p
+      font-family: $fontLato
+      font-size: 16px
+      font-weight: 400
+      line-height: 30px
+   @media screen and (max-width: $break-medium)
+      padding-top: 3em
+
+.btn_bluePrimary
+   @media screen and (max-width: $break-small)
+      width: 100%
+
+
+/*SECTION RESUME*/
+#resumen
+   @extend .blackMarginTitle
+.resumen
+   background-color: $grayLight
+   padding: 60px 0 100px 0
+
+.timeline
+   //linea vertical de timeline
+   &::before
+      content: ""
+      display: block
+      position: absolute
+      margin-top: 1em
+      left: 49.85%
+      width: 4px
+      height: 98%
+      background-color: $grayRegular
+      // background-color: $grayDark
+      // z-index: 1
+      @media screen and (max-width: $break-medium)
+         display: none
+
+.titleTimeline
+   text-align: center
+   position: relative
+   z-index: 2
+   padding: 10px 22px
+   display: block
+   span
+      border-radius: 5px
+      background-color: $grayRegular
+      text-transform: uppercase
+      font-size: 30px
+      font-weight: 700
+      color: $grayMedium
+      padding: 10px 22px
+
+.iconTimeline
+   display: block
+   text-align: center
+   padding-top: 2em
+   padding-bottom: 0.25em
+   span
+      border-radius: 50%
+      background-color: $grayRegular
+      font-size: 22px
+      color: $grayMedium
+      padding: 6px
+
+.iconExperience
+   span
+      background-color: $green
+      color: $white
+      font-size: 16px
+      padding: 9px
+
+.iconEducation
+   span
+      background-color: $orange
+      color: $white
+      font-size: 18px
+      padding: 8px
+
+.iconCourse
+   span
+      background-color: $blueLight
+      color: $white
+      font-size: 18px
+      padding: 8px
+
+.iconLastTimeline
+   display: block
+   text-align: center
+   padding-top: 2.5em
+   // padding-bottom: .25em
+   span
+      border-radius: 50%
+      background-color: $grayRegular
+      font-size: 26px
+      color: $grayMedium
+      padding: 4px
+   @media screen and (max-width: $break-medium)
+      display: none
+
+.transitionHover
+   transition-property: background-color
+   transition-duration: 0.2s
+   transition-timing-function: ease-in
+
+.transitionHBeforeL
+   transition-property: border-left-color
+   transition-duration: 0.2s
+   transition-timing-function: ease-in
+
+.transitionHBeforeR
+   transition-property: border-right-color
+   transition-duration: 0.2s
+   transition-timing-function: ease-in
+
+.itemExperience
+   color: $grayDark
+   padding: 8px 16px 20px 16px
+   display: flex
+   margin-bottom: 1em
+   // alineacion en X
+   // align-items: center
+   //alineacion en Y
+   justify-content: center
+   flex-direction: column
+
+   h2
+      font-family: $fontLato
+      font-size: 22px
+      font-weight: 500
+      text-transform: uppercase
+   h3
+      font-size: 18px
+      font-family: $fontRoboto
+      font-weight: 400
+      padding-bottom: 0.5em
+   p
+      font-family: $fontRoboto
+      font-size: 16px
+      font-weight: 300
+      color: $grayMedium
+   span
+      font-family: $fontRoboto
+      font-size: 14px
+      font-weight: 400
+   a
+      text-decoration: none
+      color: $blueBase
+
+.posItemDotLeft
+   &::before
+      content: ""
+      position: absolute
+      right: -1.48%
+      transform: translate3d(0, 220%, 0)
+      width: 16px
+      height: 16px
+      border-radius: 50%
+      background-color: $grayRegular
+      z-index: 10
+   &:hover, &:focus
+      &::before
+         background-color: $blueLight
+   // MediaQuerys
+   @media screen and (max-width: $break-large)
+      &::before
+         right: -1.78%
+
+.posItemDotRight
+   &::before
+      content: ""
+      position: absolute
+      left: -1.3%
+      transform: translate3d(0, 220%, 0)
+      width: 16px
+      height: 16px
+      border-radius: 50%
+      background-color: $grayRegular
+      z-index: 11
+   &:hover, &:focus
+      &::before
+         background-color: $blueLight
+   // MediaQuerys
+   @media screen and (max-width: $break-large)
+      &::before
+         left: -1.55%
+
+.itemLeftExperience
+   margin-top: 1em
+   margin-right: 10px
+   margin-left: 10px
+   text-align: right
+   @extend .transitionHover
+   &::before
+      content: ""
+      position: absolute
+      top: 3.1em
+      right: 1.50%
+      //transform: translate3d(0, -50px, 0)
+      /* left arrow slant */
+      border-bottom: 22px solid transparent
+      /* right arrow slant */
+      border-top: 22px solid transparent
+      /* bottom, add background color here */
+      border-left: 22px solid transparent
+      @extend .transitionHBeforeL   
+
+   @media screen and (max-width: $break-medium)  
+      &:hover, &:focus
+         &::before 
+            display: none
+
+   &:hover, &:focus
+      background-color: $white
+      border-radius: 5px
+      height: 100%
+      &::before
+         /*Flecha(triangulo)*/
+         border-left-color: $white
+
+.itemRightExperience
+   margin-top:  3.5em
+   margin-left: 10px
+   margin-right: 10px
+   text-align: left
+   @extend .transitionHover
+   &::before
+      content: ""
+      position: absolute
+      top: 5.6em
+      left: 1.50%
+      //transform: translate3d(0, -50px, 0)
+      border-bottom: 22px solid transparent
+      border-top: 22px solid transparent
+      border-right: 22px solid transparent
+      @extend .transitionHBeforeR
+   @media screen and (max-width: $break-medium)  
+      &:hover, &:focus
+         &::before 
+            display: none
+            
+   &:hover, &:focus
+      background-color: $white
+      border-radius: 5px
+      height: 100%
+      &::before
+         /*Flecha(triangulo)*/
+         border-right-color: $white
+   // MediaQuerys
+   @media screen and (max-width: $break-medium)
+      margin-top: 1em
+
+.recognition
+   padding-top: 5em
+   @media screen and (max-width: $break-medium)
+      padding-top: 3em
+   
+.contentainerItem
+   background-color: $white
+   width: 100%
+   height: 100%
+   border-radius: 5px
+   margin-top: 3em
+   display: flex
+   align-items: center
+   justify-content: center
+
+   @media screen and (max-width: $break-medium)
+      flex-direction: column
+
+.imageItem
+   padding: 0em 2em
+   span
+      font-size: 130px
+      margin: 0
+      padding: 0
+   @media screen and (max-width: $break-medium)
+      padding-top: 3em
+
+.itemRecognition
+   padding: 1.5em 2.5em
+   h2
+      font-family: $fontLato
+      font-size: 22px
+      font-weight: 500
+      text-transform: uppercase
+   p
+      font-size: 16px
+      font-family: $fontRoboto
+      font-weight: 300
+      padding: 0.4em 0
+   span
+      font-family: $fontRoboto
+      font-size: 14px
+      font-weight: 400
+   b
+      font-weight: 500
+
+/*SECTION SKILLS*/
+#skills
+   @extend .whiteMarginTitle
+   p
+      font-size: 18px
+      font-weight: 400
+      text-align: center
+      padding-bottom: 3em
+
+.skills
+   background-image: url(../images/b_skills.jpg)
+   background-position: top center
+   background-size: cover
+   background-attachment: fixed
+   width: 100%
+   height: 100%
+   color: $white
+
+.b_filtroSkills
+   background-color: rgba(33, 33, 33, 0.8)
+   padding: 60px 0 100px 0
+
+//Estructura del Contenedor de la barProgress
+.barContent
+   width: 100%
+   height: 30px 
+   border-radius: 4px
+   background-color: $grayRegular
+   font-family: $fontLato
+   font-weight: 500
+   font-size: 16px
+   margin: 16px 0
+   span
+      float: left
+
+@mixin barProgress($bC)
+   width: 0
+   height: 100%
+   border-radius: 4px
+   border-top-right-radius: 0px
+   border-bottom-right-radius: 0px
+   color: #ffffff
+   text-align: right
+   //Modificar el line-height para centrar el texto de la barra en el eje Y
+   line-height: 30px
+   background-color: $bC
+   padding: 0 10px
+
+#htmlBar 
+   @extend .barContent
+   div 
+      @include barProgress($blueLight)
+
+#css3Bar
+   @extend .barContent
+   div 
+      @include barProgress($blueLight)
+
+#jQueryBar
+   @extend .barContent
+   div 
+      @include barProgress($blueLight)
+
+#jsBar
+   @extend .barContent
+   div 
+      @include barProgress($blueLight)
+
+#illustratorBar
+   @extend .barContent
+   div 
+      @include barProgress($blueLight)
+
+#photoshopBar
+   @extend .barContent
+   div 
+      @include barProgress($blueLight)
+
+#wpBar
+   @extend .barContent
+   div 
+      @include barProgress($blueLight)
+
+#sassBar
+   @extend .barContent
+   div 
+      @include barProgress($blueLight)
+
+#stylusBar
+   @extend .barContent
+   div 
+      @include barProgress($blueLight)
+
+#gruntBar
+   @extend .barContent
+   div 
+      @include barProgress($blueLight)
+
+#gitBar
+   @extend .barContent
+   div 
+      @include barProgress($blueLight)
+
+#bootspBar
+   @extend .barContent
+   div 
+      @include barProgress($blueLight)
+
+
+/*SECTION METODO DE TRABAJO*/
+#metodoDeTrabajo
+   text-align: center
+   color: $white
+   h3
+      text-transform: uppercase
+      font-size: 26px
+      font-weight: 700
+      margin: 0
+      padding-bottom: 1.6em
+
+.metodoDeTrabajo
+   background-image: url(../images/b_metodoTrabajo.jpg)
+   background-size: cover
+   background-position: center
+   background-attachment: fixed
+   width: 100%
+   height: 100%
+.b_filtroMetodoDeTrabajo
+   background-color: rgba(2, 168, 244, 0.87)
+   padding: 108px 0
+
+.workGroup
+   @extend .centerXY
+
+.work
+   border: 5px solid $white
+   min-width: 134px
+   height: 134px
+   z-index: 2
+   @extend .centerXY
+   span
+      font-size: 36px
+      z-index: 2
+      transition: color 0.2s
+   h4
+      font-size: 16.5px
+      text-transform: uppercase
+      font-family: $fontLato
+      font-weight: 300
+   &::after
+      position: absolute
+      content: ""
+      width: 134px
+      height: 134px
+      background-color: $white
+      opacity: 0
+      border-radius: 50%
+      z-index: 1
+      transform: scale(0.3)
+      transition: all 0.2s
+   &:hover, &:focus
+      &::after
+         transform: scale(1) 
+         opacity: 1
+         border-radius: 0px
+      span
+         color: $blueLight
+
+   @media screen and (max-width: $break-medium)
+      margin-bottom: 2em
+
+.arrowWork
+   position: absolute
+   right: -6.5%
+   top: 41%
+   span
+      font-size: 24px
+   @media screen and (max-width: $break-medium)
+      top: 37%
+
+.ignoreArrow
+   @media screen and (max-width: $break-medium)
+      span
+         display: none
+
+/*SECCION SECCION*/
+#portafolio
+   @extend .blackMarginTitle
+.portafolio
+   background-color: $white
+   padding: 60px 0 80px 0
+
+.filters
+   padding-bottom: 1.25em
+   ul
+      padding: 0px
+      // @extend .centerX
+   li
+      display: inline-block
+      // padding: 0 11px
+      margin: 0 10px 10px 10px
+   a
+      cursor: pointer
+   @media screen and (max-width: $break-small)
+      li
+         display: block
+         width: 82%
+         margin-left: 9%
+         margin-right: 9%
+         margin-bottom: 10px
+   a
+      background-color: $grayLight
+      text-decoration: none
+      text-transform: uppercase
+      font-weight: 400
+      font-size: 16px
+      color: $grayMedium
+      display: block
+      padding: 11px 30px
+      border-radius: 4px
+      transition-property: background-color
+      transition-duration: 0.2s
+      transition-timing-function: ease-in
+      &:hover
+         background-color: $blueThin
+         color: $white
+      &.active
+         background-color: $blueThin
+         color: $white
+
+/*secion de items de portafolio*/
+.itemProject
+   margin-bottom: 20px
+   text-align: center
+   img
+      display: block
+      max-width: 100%
+      height: auto
+      position: relative
+      transition: all 0.4s ease-out 0s
+   &:hover img
+      transform: scale(1.1)
+
+.itemProject .imageProject
+   box-sizing: border-box
+   list-style: none outside none
+   overflow: hidden
+   position: relative    
+   transition: all 0.4s ease 0s
+
+.itemProject .overlay
+   color: $white 
+   transition: all 0.4s ease 0s
+   h2
+      display: block
+      font-size: 20px
+      font-weight: 700
+      line-height: 1.3
+      padding: 0
+      text-transform: uppercase
+      margin-top: 50px
+   p
+      border-top: 1px solid $white
+      font-size: 14px
+      font-weight: 400
+      padding-top: 10px
+   a
+      text-decoration: none
+   span 
+      font-size: 35px
+   
+.itemProject .overlay > h2 a
+   opacity: 1
+   transition: all 0.4s ease 0s
+
+.itemProject .overlay:hover > h2 a
+   opacity: 1
+
+.imageProject .overlay
+   box-sizing: border-box
+   background-clip: padding-box
+   height: 100%
+   opacity: 0
+   overflow: hidden
+   padding: 20px
+   position: absolute
+   top: 0       
+   transition: opacity 0.4s ease-in-out 0s
+   width: 100%
+
+.imageProject:hover .overlay
+   background-color: rgba(38,180,244, 0.90)
+   opacity: 1
+
+/*SECCION BANER-CONTACTO*/
+#bannerContacto
+   text-align: center
+   h3
+      text-transform: uppercase
+      font-size: 24px
+      font-weight: 700
+      color: $white
+      margin: 0
+      padding-bottom: 30px
+   p
+      font-size: 18px
+      color: $grayRegular
+      font-weight: 400
+      line-height: 18px
+
+.bannerContacto
+   background-color: $fontColor
+   padding: 70px 0 70px 0
+   @media screen and (max-width: $break-medium)
+      padding: 50px 0 45px 0
+.iconPlane
+   @extend .centerY
+   span
+      color: $white
+      font-size: 5em
+      line-height: 1.2
+   @media screen and (max-width: $break-medium)
+      display: none
+
+.itemBanner
+   @extend .centerX
+   padding-top: 2.5em
+   @media screen and (max-width: $break-medium)
+      padding-top: 1.8em
+
+
+/*SECTION FRASE*/
+
+#frase
+   text-align: center
+   color: $white
+   p
+      font-size: 24px
+      font-weight: 400
+      margin: 0
+      line-height: 32px
+
+.frase
+   background-image: url(../images/b_frase.jpg)
+   background-size: cover
+   background-position: center
+   background-attachment: fixed
+   width: 100%
+   height: 100%
+.b_filtroFrase
+   background-color: rgba(0, 0, 0, 0.49)
+   padding: 124px 0
+
+.comillas
+   font-size: 32px
+   font-weight: 700
+.autor
+   font-size: 18px
+   font-weight: 300
+
+/*SECTION CONTACTO*/
+#contacto
+   @extend .whiteMarginTitle
+   p
+      text-align: center
+      font-size: 18px
+      font-weight: 300
+      color: $white
+      padding-bottom: 30px
+   input, textarea
+      font-size: 20px
+      font-weight: 300
+      padding: 23px 15px
+      border-radius: 3px
+   input
+      margin-bottom: 15px
+   textarea
+      margin-bottom: 35px
+.contacto
+   background-color: $fontColor
+   padding: 60px 0 80px 0
+
+/******FALTA VALIDAR EL FORMULARIO Y AGREGAR EFECTOS*******/
+
+/*SECTION FOOTER*/
+#footer
+   //text-align: center
+   h2
+      color: $grayThin
+      padding: 0.5em 0 1em 0
+   ul
+      padding: 0  
+   li
+      display: inline-block
+      padding: 0 15px
+   span
+      color: $white 
+      font-size: 20px
+      @extend .transitionHover
+      &:hover
+         color: $blueThin
+      &:focus
+         color: $blueThin
+   a
+      text-decoration: none
+   img
+      width: 200px
+      height: auto
+   p
+      color: $white 
+      font-size: 12px
+      font-weight: 100
+   .icon 
+      svg
+         fill: $white
+         @extend .transitionHover
+         &:hover
+            fill: $blueThin
+         &:focus
+            fill: $blueThin
+         
+         
+      
+.footer
+   background-image: url(../images/b_footer.jpg)
+   background-size: cover
+   background-position: center
+   background-attachment: fixed
+   width: 100%
+   height: 100%
+   
+.b_filtroFooter
+   background-color: rgba(23, 24, 28, 0.80)
+   padding: 90px 0 90px 0
+   @media screen and (max-width: $break-small)
+      padding: 0
+      width: 100%
+      height: 100%
+
+.socialNetwork
+   padding: 0.5em 0
+
+.contentFooter
+   width: 100%
+   height: 100%
+   display: flex
+   align-items: center
+   justify-content: center
+   flex-direction: column
+   @media screen and (max-width: $break-small)
+      width: auto
+      height: 100vh
+
+/*SECCION MODAL*/
+.modal-dialog
+   width: 100%
+   margin: 0
+   
+.modal-content
+   border-radius: 0
+   background-clip: border-box
+   width: 100% 
+   box-shadow: none
+   border: none
+   min-height: 100%
+   padding: 0 0 100px 0
+   color: $grayMedium
+   
+   .modal-header
+      text-align: center
+      border-bottom: 0
+      border-top: 1px solid $grayThin
+      span
+         font-size: 44px
+         font-weight: 100
+      h2
+         font-size: 3.2em
+         text-transform: uppercase
+         font-weight: 700
+         font-family: $fontRoboto
+
+   .modal-body
+      padding-bottom: 2.5em
+      img
+         margin-bottom: 2.5em
+         border-radius: 4px
+      p
+         font-size: 15px
+         
+      button
+         margin-top: 2em
+         border-radius: 4px
+         background-color: $blueThin
+         color: $white 
+         font-size: 14px
+         font-family: $fontLato
+         font-weight: 300
+         text-transform: uppercase
+         padding: 6px 10px
+         transition: all 0.3s ease-out 0s
+         a
+            color: $white 
+            text-decoration: none
+         &:hover
+            background-color: $blueBase
+
+   .modal-footer
+      text-align: center !important
+      button
+         border-radius: 4px
+         background-color: $red
+         color: $white
+         font-size: 14px
+         font-family: $fontLato
+         font-weight: 300
+         text-transform: uppercase
+         padding: 6px 10px
+         transition: all 0.3s ease-out 0s
+         &:hover
+            background-color: $redRegular
+
+.close_modal
+   button
+      transition: all 0.3s ease-out 0s
+      span
+         font-size: 2em
+         line-height: 2
+      
+.infoProject
+
+.tagsProject
+   ul
+      margin: 0
+      padding: 0
+      li
+         list-style: none
+         font-size: 14px
+         padding: 5px 0
+         span
+            padding-right: 0.5em
+            font-size: 16px
